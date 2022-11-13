@@ -9,45 +9,49 @@
    
     display: flex;
     margin-right: 2vh;
+    top:0;
   
    
-    
-    
    
  }
+
+ 
  .headingMap{
     position: absolute;
     top: 110px;
+   
  }
 
  .text{
    width: 200px;
+   top:0;
    
  }
  .input-field{
    position: absolute;
    outline:transparent;
-   width :150px;
-    top: 80px;
-    margin-left: 250px;
+   width :130px;
+    top: 95px;
+    margin-left: 220px;
+    
  }
  
  .searchicon{
    position: absolute;
-   margin-left: 210px;
+   margin-left: 180px;
    outline:transparent;
     top: 100px;
  }
    .add{
       position: absolute;
-   margin-left: 140vh;
+   margin-left: 118vh;
    outline:transparent;
     top: 100px;
 
    }
    .FilterListIcon{
       position: absolute;
-   margin-left: 130vh;
+   margin-left: 110vh;
    outline:transparent;
     top: 85px;
    }

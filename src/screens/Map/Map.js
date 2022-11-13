@@ -2,23 +2,29 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { defaultMarker } from "./defaultMarker";
 import { popupContent, popupHead, popupText, okText } from "./popupStyles";
+import DriverDetails from "../DriverDetails";
+import {Routes, Route, useNavigate} from 'react-router-dom';
 import "./Map.css";
 
 
 const center = [51.505, -0.09];
 
 const MapComp = () => {
-  return (
   
-    <div>
+
+  return (
     
-    <MapContainer style={{ width: "50%", height: "60vh",left:"20%",top:"10vh"}} center={center} zoom={13}>
+     <div  style={{width: 300}}>
+   
+     <MapContainer style={{ width: "200%", height: "55vh",left:"80%",top:"13vh"}} center={center} zoom={10}>
     
     <TileLayer
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     />
     <Marker position={center} icon={defaultMarker}>
+       
+
       <Popup className="request-popup">
         <div style={popupContent}>
           <img
@@ -41,8 +47,12 @@ const MapComp = () => {
           </div>
         </div>
       </Popup>
+      
     </Marker>
+    
     </MapContainer>
+ 
+
     </div>
     
   );

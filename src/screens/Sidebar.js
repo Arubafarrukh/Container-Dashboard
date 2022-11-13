@@ -6,16 +6,10 @@ import "react-pro-sidebar/dist/css/styles.css";
 import { Box ,IconButton , Typography,useTheme} from '@mui/material';
 import { Link } from 'react-router-dom';
 import FlareIcon from '@mui/icons-material/Flare';
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import Map from "../screens/Map/Map";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
-import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import PlayDisabledIcon from '@mui/icons-material/PlayDisabled';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
@@ -34,6 +28,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 import AddIcon from '@mui/icons-material/Add';
+import { Grid } from '@material-ui/core';
 
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -66,7 +61,8 @@ const Sidebar = () => {
   };
   
   return (
-    <Box className="sidebar"
+ 
+       <Grid className="sidebar"
     sx={{
       "& .pro-sidebar-inner": {
         background: `${colors.primary[400]} !important`,
@@ -292,7 +288,12 @@ const Sidebar = () => {
           </Box>
         </Menu>
       </ProSidebarProvider>
-    </Box>
+     
+    </Grid>
+   
+   
+   
+    
   )
 }
 

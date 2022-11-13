@@ -1,4 +1,5 @@
 import { Box, Breadcrumbs, IconButton, TextField, useTheme ,Typography} from "@mui/material";
+import { Container, Form } from "react-bootstrap";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../Theme.js";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
@@ -12,6 +13,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Avatar from '@mui/material/Avatar';
 import SearchIcon from '@mui/icons-material/Search';
 import FilterListIcon from '@mui/icons-material/FilterList';
+import Map  from "../screens/Map/Map"
 // import img from ""
 import "./Topbar.css"
 
@@ -57,19 +59,20 @@ const Topbar = () => {
           color="inherit"
           href=""
         >
-          All Machines
+         All Machines
         </Link>
         
       </Breadcrumbs>
       
-      <Typography className="headingMap">ALL MACHINES</Typography>  
-      <FormControl >
+      <div className="headingMap"><h3>ALL MACHINES</h3></div>  
+      
+      <FormControl  >
   
       
       <IconButton type="button"  class="searchicon"  sx={{ p: 1 }}>
           <SearchIcon />
         </IconButton>
-    <TextField  class="input-field" type="text" placeholder="     search" name="usrnm"></TextField>
+    <TextField  variant="outlined" size="small" class="input-field" type="text" placeholder="     search" ></TextField>
     <IconButton type="button" sx={{ p: 1 }}>
           <AddIcon className="add" />
         </IconButton>
@@ -81,6 +84,7 @@ const Topbar = () => {
  
 
 </FormControl>
+
       </Box>
 
       {/* ICONS */}
@@ -96,18 +100,10 @@ const Topbar = () => {
           <AddIcon />
         </IconButton>
         
-        <TextField
-          
-          label="New File"
-          className="text"
-          
-        
-        >
-          
-        </TextField>
+        <TextField  variant="outlined" size="small" class="text" type="text" placeholder="newFile" ></TextField>
         <Avatar alt="Remy Sharp" />
         {/* src= {img}   */}
-        <FormControl >
+        <FormControl variant="outlined" size="small" >
         <Select >
         <MenuItem>
        
