@@ -1,7 +1,12 @@
 import React from "react";
+import { Box, Breadcrumbs, IconButton, TextField, useTheme ,Typography} from "@mui/material";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { defaultMarker } from "./defaultMarker";
 import { popupContent, popupHead, popupText, okText } from "./popupStyles";
+import SearchIcon from '@mui/icons-material/Search';
+import FilterListIcon from '@mui/icons-material/FilterList';
+import AddIcon from '@mui/icons-material/Add';
+import FormControl from '@mui/material/FormControl';
 import DriverDetails from "../DriverDetails";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import "./Map.css";
@@ -14,10 +19,15 @@ const MapComp = () => {
 
   return (
     
-     <div  style={{width: 300}}>
-   
-     <MapContainer style={{ width: "200%", height: "55vh",left:"80%",top:"13vh"}} center={center} zoom={10}>
-    
+     <div  style={{width: 300 , top: 0}}>
+      
+      
+
+ 
+
+
+     <MapContainer style={{ width: "200%", height: "55vh",left:"0%",top:"12vh"}} center={center} zoom={10}>
+     
     <TileLayer
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

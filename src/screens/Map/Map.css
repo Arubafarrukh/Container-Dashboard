@@ -1,7 +1,49 @@
 .request-popup .leaflet-popup-content-wrapper {
     border-radius: 0px;
-    margin-left: 25vh;
+    /* margin-left: 25vh; */
   }
   .request-popup{
     margin-left: 25vh;
   }
+  .headingMap{
+    position: absolute;
+    top: 0vh;
+   
+ }
+
+ .text{
+   width: 200px;
+   top:0vh;
+   
+ }
+ .input-field{
+   /* position: absolute; */
+   outline:transparent;
+   width :130px;
+   top: 0vh;
+    /* top: 95px;
+    margin-left: 220px; */
+    
+ }
+ 
+ .searchicon{
+   /* position: absolute; */
+   /* margin-left: 180px; */
+   outline:transparent;
+    top: 0vh;
+ }
+   .add{
+      /* position: absolute; */
+   /* margin-left: 118vh; */
+   outline:transparent;
+   top: 0;
+    /* top: 100px; */
+
+   }
+   .FilterListIcon{
+      /* position: absolute; */
+   /* margin-left: 110vh; */
+   outline:transparent;
+   top: 0px;
+    /* top: 85px; */
+   }

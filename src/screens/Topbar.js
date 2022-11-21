@@ -46,7 +46,7 @@ const Topbar = () => {
       
       <Box
         display="flex"
-        backgroundColor={colors.primary[400]}
+        backgroundColor={colors.primary[500]}
         height="0px"
         
       >
@@ -63,17 +63,24 @@ const Topbar = () => {
         </Link>
         
       </Breadcrumbs>
+      </Box>
+      <Box>
       
       <div className="headingMap"><h3>ALL MACHINES</h3></div>  
       
       <FormControl  >
   
       
-      <IconButton type="button"  class="searchicon"  sx={{ p: 1 }}>
-          <SearchIcon />
+      
+   
+    <TextField  variant="outlined" size="small" class="input-field" type="text" placeholder="search" ></TextField>
+    
+    <IconButton  class="searchicon" >
+    <SearchIcon className="searchicon"/>
+    
         </IconButton>
-    <TextField  variant="outlined" size="small" class="input-field" type="text" placeholder="     search" ></TextField>
     <IconButton type="button" sx={{ p: 1 }}>
+         
           <AddIcon className="add" />
         </IconButton>
     <IconButton type="button" sx={{ p: 1 }}>
@@ -87,14 +94,17 @@ const Topbar = () => {
 
       </Box>
 
-      {/* ICONS */}
+      
       <Box className="topbar2">
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (
-            <DarkModeOutlinedIcon />
-          ) : (
             <LightModeOutlinedIcon />
+            
+          ) : (
+            
+            <DarkModeOutlinedIcon />
           )}
+          
         </IconButton>
         <IconButton type="button" sx={{ p: 1 }}>
           <AddIcon />
@@ -102,7 +112,7 @@ const Topbar = () => {
         
         <TextField  variant="outlined" size="small" class="text" type="text" placeholder="newFile" ></TextField>
         <Avatar alt="Remy Sharp" />
-        {/* src= {img}   */}
+         {/* src= {}   */}
         <FormControl variant="outlined" size="small" >
         <Select >
         <MenuItem>

@@ -2,14 +2,15 @@
     
  display: flex;
  
- margin-left: 38vh;
+ 
+ /* margin-left: 38vh; */
  
  }
 .topbar2 {
    
     display: flex;
-    margin-right: 2vh;
-    top:0;
+    /* margin-right: 2vh; */
+    
   
    
    
@@ -17,8 +18,9 @@
 
  
  .headingMap{
-    position: absolute;
+    /* position: absolute; */
     top: 110px;
+    left:0vh
    
  }
 
@@ -31,27 +33,34 @@
    position: absolute;
    outline:transparent;
    width :130px;
-    top: 95px;
-    margin-left: 220px;
+    top: 100px;
+    margin-left: -50px;
+
+   
     
  }
  
  .searchicon{
+  
    position: absolute;
-   margin-left: 180px;
-   outline:transparent;
-    top: 100px;
+   
+   
+    top: 115px;
+    margin-left: 30vh;
+  
+     
+    
  }
    .add{
       position: absolute;
-   margin-left: 118vh;
+   margin-left: 50vh;
    outline:transparent;
     top: 100px;
 
    }
    .FilterListIcon{
       position: absolute;
-   margin-left: 110vh;
+   margin-left: 40vh;
    outline:transparent;
     top: 85px;
    }

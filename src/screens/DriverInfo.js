@@ -13,7 +13,7 @@ import Avatar from '@material-ui/core/Avatar';
 function DriverInfo() {
   return (
     <div>
-       <Card className='cards' sx={{ maxWidth: 345 }}>
+       <Card className='cards' sx={{ maxWidth:345  }}>
       <CardMedia
         component="img"
         height="250"

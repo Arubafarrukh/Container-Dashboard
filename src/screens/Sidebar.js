@@ -38,7 +38,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
     <MenuItem
       active={selected === title}
       style={{
-        color: colors.grey[100],
+        color: "#FFFFFF",
       }}
       onClick={() => setSelected(title)}
       icon={icon}
@@ -65,7 +65,7 @@ const Sidebar = () => {
        <Grid className="sidebar"
     sx={{
       "& .pro-sidebar-inner": {
-        background: `${colors.primary[400]} !important`,
+        background: `${colors.primary[100]} !important`,
       },
       "& .pro-icon-wrapper": {
         backgroundColor: "transparent !important",
@@ -74,10 +74,10 @@ const Sidebar = () => {
         padding: "5px 35px 5px 20px !important",
       },
       "& .pro-inner-item:hover": {
-        color: "#868dfb !important",
+        color: "#fcfcfc !important",
       },
       "& .pro-menu-item.active": {
-        color: "#6870fa !important",
+        color: "transparent !important",
       },
     }}>
       <ProSidebarProvider collapsed={isCollapsed}>
@@ -88,10 +88,10 @@ const Sidebar = () => {
            
             style={{
               margin: "10px 0 20px 0",
-              color: colors.grey[100],
+              
             }}
           >
-            {!isCollapsed && (
+          
               <Box
                 display="flex"
                 justifyContent="space-between"
@@ -102,14 +102,13 @@ const Sidebar = () => {
               title="Arrival"
               to="/"
               icon={<FlareIcon />}
-              selected={selected}
-              setSelected={setSelected}
-              color={colors.grey[100]}
+             
+              color="#FFFFFF"
             />
                 
           
               </Box>
-            )}
+          
           </MenuItem>
 
           
@@ -117,32 +116,47 @@ const Sidebar = () => {
            
                <List>
       <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <PlayDisabledIcon />
+        <ListItemIcon  
+         >
+          <PlayDisabledIcon style={{ color: "white" }} />
         </ListItemIcon>
-        <ListItemText primary="Dashboard" />
-        {open ? <ExpandLess /> : <AddIcon />}
+       
+        <ListItemText  
+         disableTypography
+         primary={<Typography  type="body2" style={{ color: '#FFFFFF' }}>Dashboard</Typography>}
+          />
+        {open ? <ExpandLess style={{ color: '#FFFFFF' }}  /> : <AddIcon style={{ color: "white" }}/>}
         
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List  component="div" disablePadding>
           <ListItemButton sx={{ pl: 9 }}>
            
-            <ListItemText primary="subitem" />
+            <ListItemText  
+             disableTypography
+             primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>subitem</Typography>}
+            
+            />
           </ListItemButton>
         </List>
       </Collapse>
       <ListItemButton>
         <ListItemIcon>
-          < LayersClearIcon />
+          < LayersClearIcon style={{ color: "white" }} />
         </ListItemIcon>
-        <ListItemText primary="Tracking" />
+        <ListItemText 
+           disableTypography
+           primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Tracking</Typography>}
+         />
       </ListItemButton>
       <ListItemButton >
         <ListItemIcon>
-          <HourglassEmptyIcon />
+          <HourglassEmptyIcon style={{ color: "white" }}/>
         </ListItemIcon>
-        <ListItemText primary="Ananlysis" />
+        <ListItemText 
+        disableTypography
+        primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Ananlysis</Typography>}
+         />
         
       </ListItemButton>
       
@@ -150,7 +164,7 @@ const Sidebar = () => {
 
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color="#FFFFFF"
               sx={{ m: "15px 0 5px 20px" }}
             >
               System
@@ -179,36 +193,49 @@ const Sidebar = () => {
 
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color="#FFFFFF"
               sx={{ m: "15px 0 5px 20px" }}
             >
+
               Transportation
             </Typography>
             
             <ListItemButton onClick={handleClick}>
         <ListItemIcon>
-          <BusinessIcon />
+          <BusinessIcon style={{ color: "white" }} />
         </ListItemIcon>
-        <ListItemText primary="Cargo" />
-        {open ? <ExpandLess /> : <AddIcon />}
+        <ListItemText 
+        disableTypography
+        primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Cargo</Typography>}
+         />
+        {open ? <ExpandLess style={{ color: "white" }} /> : <AddIcon style={{ color: "white" }} />}
         
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List  component="div" disablePadding>
           <ListItemButton sx={{ pl: 9 }}>
            
-            <ListItemText primary="subitem" />
-            {open ? <AddIcon /> : <ExpandLess />}
+            <ListItemText 
+            disableTypography
+            primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>subitem</Typography>}
+            />
+            {open ? <AddIcon style={{ color: "white" }} /> : <ExpandLess  style={{ color: "white" }}/>}
           </ListItemButton>
           <ListItemButton sx={{ pl: 9 }}>
            
-            <ListItemText primary="subitem" />
-            {open ? <AddIcon /> : <ExpandLess />}
+            <ListItemText 
+            disableTypography
+            primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>subitem</Typography>}
+             />
+            {open ? <AddIcon style={{ color: "white" }} /> : <ExpandLess style={{ color: "white" }}/>}
           </ListItemButton>
           <ListItemButton sx={{ pl: 9 }}>
            
-            <ListItemText primary="subitem" />
-            {open ? <AddIcon /> : <ExpandLess />}
+            <ListItemText    
+            disableTypography
+            primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>subitem</Typography>}
+            />
+            {open ? <AddIcon style={{ color: "white" }} /> : <ExpandLess  style={{ color: "white" }}/>}
           </ListItemButton>
         </List>
       </Collapse>
@@ -216,34 +243,46 @@ const Sidebar = () => {
         
              <ListItemButton onClick={handleClick}>
         <ListItemIcon>
-          <BarChartOutlinedIcon />
+          <BarChartOutlinedIcon style={{ color: "white" }} />
         </ListItemIcon>
-        <ListItemText primary="Urban" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        <ListItemText 
+        disableTypography
+        primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Urban</Typography>}
+         />
+        {open ? <ExpandLess style={{ color: "white" }} /> : <ExpandMore style={{ color: "white" }}/>}
         
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List  component="div" disablePadding>
           <ListItemButton sx={{ pl: 9 }}>
            
-            <ListItemText primary="subitem" />
+            <ListItemText 
+            disableTypography
+            primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>subitem</Typography>} />
           </ListItemButton>
         </List>
       </Collapse>
            
                <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <PieChartOutlineOutlinedIcon />
+        <ListItemIcon >
+          <PieChartOutlineOutlinedIcon style={{ color: "white" }} />
         </ListItemIcon>
-        <ListItemText primary="Settings" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        <ListItemText 
+        disableTypography
+        primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Settings</Typography>}
+        
+        />
+        {open ? <ExpandLess style={{ color: "white" }} /> : <ExpandMore style={{ color: "white" }}/>}
         
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List  component="div" disablePadding>
           <ListItemButton sx={{ pl: 9 }}>
            
-            <ListItemText primary="subitem" />
+            <ListItemText 
+            disableTypography
+            primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>sub item</Typography>}
+            />
           </ListItemButton>
         </List>
       </Collapse>
@@ -264,24 +303,32 @@ const Sidebar = () => {
             
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color="#FFFFFF"
               sx={{ m: "15px 0 5px 20px" }}
             >
               
             </Typography>
                    <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <PieChartOutlineOutlinedIcon />
+        <ListItemIcon >
+          <PieChartOutlineOutlinedIcon style={{ color: "white" }}/>
         </ListItemIcon>
-        <ListItemText primary="lorem ipsum" />
-        {open ? <ExpandLess /> : <KeyboardDoubleArrowRightIcon />}
+        
+        <ListItemText 
+               disableTypography
+               primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Lorem ipsum</Typography>}
+        />
+        {open ? <ExpandLess style={{ color: "white" }} /> : <KeyboardDoubleArrowRightIcon style={{ color: "white" }} />}
         
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List  component="div" disablePadding>
           <ListItemButton sx={{ pl: 9 }}>
            
-            <ListItemText primary="subitem" />
+            <ListItemText 
+            disableTypography
+            primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>sub item</Typography>}
+
+             />
           </ListItemButton>
         </List>
       </Collapse>

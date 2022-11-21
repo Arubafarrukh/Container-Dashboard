@@ -1,11 +1,10 @@
 
-.item1 { grid-area: header;
-         }
+.item1 { grid-area: header;}
 .item2 {  }
 .item3 {  }
 .item4{  }
 .item4 { }
-.item5 {grid-area:footer}
+.item5 {grid-area: footer;}
 
 .grid-container {
   display: grid;
@@ -29,17 +28,29 @@
 
     margin-left: 95vh;
     margin-top: 65px;
+
     
  
+ 
+}
+.headingMap{
+  padding-top: 20px;
+  
  
 }
 .grid-container > .item5 {
 
     margin-left: 37vh;
-    display: flex;
+    width: 28%;
+   
    
     
     
     
 }
+.grid-container > .item5 > {
 
+    margin-left: 37vh;
+     
+    
+}
