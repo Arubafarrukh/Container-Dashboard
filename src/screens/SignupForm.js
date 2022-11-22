@@ -38,7 +38,7 @@ function SignupForm() {
   return (
     <div className='wrapper'>
 
-    <div className='item1'>  <img  src={image}/> </div>
+    <div className='item1'>  <img  src={img}/> </div>
     <div className='item2'>
      <form  >
       <Box display="flex" flexDirection={"column"} maxWidth={400}
@@ -47,23 +47,28 @@ function SignupForm() {
 
      
        >
-        <img src={img}/>
+        
         <TextField margin="normal"  type={'name'} variant='outlined' placeholder='PhoneNumber' name='phonenumber'
+        sx= {{ height: 10,marginBottom:5}}
         value={input.phonenumber} onChange={(e)=> setInput({...input,
             [e.target.name]:e.target.value})}/>
         
         <TextField margin="normal"   type={'name'} variant='outlined' placeholder='UserName' name='username'
+        sx= {{ height: 10,marginBottom:5}}
         value={input.username} onChange={(e)=> setInput({...input,
         [e.target.name]:e.target.value})}/>
         <TextField margin="normal"  type={'email'} variant='outlined' placeholder='Email' name='email'
+        sx= {{ height: 10,marginBottom:5}}
         value={input.email} onChange={(e)=> setInput({...input,
         [e.target.name]:e.target.value})}/>
         
         <TextField margin="normal"  type={'password'} variant='outlined'  placeholder='Password' name='password'
+        sx= {{ height: 0,marginBottom:6}}
         value={input.password}
         onChange={(e)=> setInput({...input,
           [e.target.name]:e.target.value})} />
           <TextField margin="normal"  type={'password'} variant='outlined' placeholder='ConfirmPassword' name='confirmpassword'
+          sx= {{ height: 0,marginBottom:8}}
         value={input.confirmpassword} onChange={(e)=> setInput({...input,
         [e.target.name]:e.target.value})}/>
        
@@ -71,7 +76,7 @@ function SignupForm() {
        <Button variant='contained' 
         onClick={handleLogin}
         
-       sx={{marginTop:3,borderRadius:3,color: 'white', backgroundColor: 'orange',':hover': {
+       sx={{ width:230 ,borderRadius:3,color: 'white', backgroundColor: 'orange',':hover': {
         bgcolor: 'orange', 
         color: 'white',
       }, }}>Sign Up

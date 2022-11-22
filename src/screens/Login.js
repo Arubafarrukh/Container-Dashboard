@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <div className='wrapper'>
 
-      <div className='item1'>  <img  src={image}/> </div>
+      <div className='item1'>  <img  src={img}/> </div>
       <div className='item2'>
        <form >
         <Box display="flex" flexDirection={"column"} maxWidth={400}
@@ -48,20 +48,23 @@ export default function Login() {
 
        
          >
-          <img src={img}/>
+          
           <TextField margin="normal"  type={'email'} variant='outlined' placeholder='Email' name='email'
+          sx= {{ height: 0,marginBottom:6}}
           value={input.email} onChange={(e)=> setInput({...input,
           [e.target.name]:e.target.value})}/>
           <TextField margin="normal"  type={'password'} variant='outlined'  placeholder='Password' name='password'
           value={input.password}
+          sx= {{ height: 0 ,marginBottom:8}}
           onChange={(e)=> setInput({...input,
             [e.target.name]:e.target.value})} />
          
          
          <Button variant='contained' onClick={handleLogin} 
-         sx={{marginTop:3,borderRadius:3,color: 'white', backgroundColor: 'orange',':hover': {
+         sx={{ width:230 ,borderRadius:3,color: 'white', backgroundColor: 'orange',':hover': {
           bgcolor: 'orange', 
           color: 'white',
+          
         }, }}>Login
           </Button> 
          
