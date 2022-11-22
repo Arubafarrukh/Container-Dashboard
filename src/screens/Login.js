@@ -61,7 +61,7 @@ export default function Login() {
          
          
          <Button variant='contained' onClick={handleLogin} 
-         sx={{ width:230 ,borderRadius:3,color: 'white', backgroundColor: 'orange',':hover': {
+         sx={{ width:210 ,borderRadius:3,color: 'white', backgroundColor: 'orange',':hover': {
           bgcolor: 'orange', 
           color: 'white',
           

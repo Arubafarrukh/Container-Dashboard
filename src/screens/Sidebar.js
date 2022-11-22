@@ -89,268 +89,277 @@ const Sidebar = () => {
     }}>
       <ProSidebarProvider collapsed={isCollapsed}>
       {theme.palette.mode === "dark" ? (
-             <Menu iconShape="square"
+              <Menu iconShape="square"
         
     
-             style={{backgroundColor:"black"}}
-             
-             >
-               {/* LOGO AND MENU ICON */}
-               <MenuItem
-                 onClick={() => setIsCollapsed(!isCollapsed)}
-                
-                
-                 style={{
-                   margin: "10px 0 20px 0",
-                   
-                   
-                 }}
-               >
-               
-                   <Box
-                     display="flex"
-                     justifyContent="space-between"
-                     alignItems="center"
-                     ml="10px"
-                   >
-                    {/*  */}
-                    
-                 
-                 <Item
-                   title="Arrival"
-                   to="/"
-                   icon={<FlareIcon  style={{ color: "white" }} />}
-                  
-                 />
-                     
-               
-                   </Box>
-               
-               </MenuItem>
-     
-               
-               <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-                
-                    <List>
-           <ListItemButton onClick={handleClick}>
-             <ListItemIcon  
+              style={{backgroundColor:"black"}}
+              
               >
-               <PlayDisabledIcon style={{ color: "white" }} />
-             </ListItemIcon>
-            
-             <ListItemText  
-              disableTypography
-              primary={<Typography  type="body2" style={{ color: 'white' }}>Dashboard</Typography>}
-               />
-             {open ? <ExpandLess style={{ color: 'white' }}  /> : <AddIcon style={{ color: "white" }}/>}
-             
-           </ListItemButton>
-           <Collapse in={open} timeout="auto" unmountOnExit>
-             <List  component="div" disablePadding>
-               <ListItemButton sx={{ pl: 9 }}>
+                {/* LOGO AND MENU ICON */}
                 
-                 <ListItemText  
+                   
+                  
+                       
+              
+      
+                
+                <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+                 
+                     <List>
+                        
+                    <ListItemButton >
+              <ListItemIcon>
+                <FlareIcon style={{ color: "white" }}/>
+              </ListItemIcon>
+              <ListItemText 
+              disableTypography
+              primary={<Typography type="body2" style={{ color: 'white' }}>Arrival</Typography>}
+               />
+              
+            </ListItemButton>
+            <ListItemButton onClick={handleClick}>
+              <ListItemIcon  
+               >
+                <PlayDisabledIcon style={{ color: "white" }} />
+              </ListItemIcon>
+             
+              <ListItemText  
+               disableTypography
+               primary={<Typography  type="body2" style={{ color: 'white' }}>Dashboard</Typography>}
+                />
+              {open ? <ExpandLess style={{ color: 'white' }}  /> : <AddIcon style={{ color: "white" }}/>}
+              
+            </ListItemButton>
+            <Collapse in={open}  >
+              <List  component="div" disablePadding>
+                <ListItemButton sx={{ pl: 9 }}>
+                 
+                  <ListItemText  
+                   disableTypography
+                   primary={<Typography type="body2" style={{ color: 'white' }}>subitem</Typography>}
+                  
+                  />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <ListItemButton>
+              <ListItemIcon>
+                < LayersClearIcon style={{ color: "white" }} />
+              </ListItemIcon>
+              <ListItemText 
+                 disableTypography
+                 primary={<Typography type="body2" style={{ color: 'white' }}>Tracking</Typography>}
+               />
+            </ListItemButton>
+            <ListItemButton >
+              <ListItemIcon>
+                <HourglassEmptyIcon style={{ color: "white" }}/>
+              </ListItemIcon>
+              <ListItemText 
+              disableTypography
+              primary={<Typography type="body2" style={{ color: 'white' }}>Ananlysis</Typography>}
+               />
+              
+            </ListItemButton>
+            
+          </List>
+      
+                  <Typography
+                    variant="h6"
+                    color="white"
+                    sx={{ m: "15px 0 5px 20px" }}
+                  >
+                    System
+                  </Typography>
+                 
+                
+                <ListItemButton onClick={handleClick}>
+              <ListItemIcon>
+                <DetailsIcon style={{ color: "white" }} />
+              </ListItemIcon>
+              <ListItemText 
+              disableTypography
+              primary={<Typography type="body2" style={{ color: 'white' }}>Reports</Typography>}
+               />
+              
+              
+            </ListItemButton>
+                 
+                  <ListItemButton onClick={handleClick}>
+              <ListItemIcon>
+                <ContactsOutlinedIcon style={{ color: "white" }} />
+              </ListItemIcon>
+              <ListItemText 
+              disableTypography
+              primary={<Typography type="body2" style={{ color: 'white' }}>Deviations</Typography>}
+               />
+              
+              
+            </ListItemButton>
+                
+                 
+                  
+                  <ListItemButton onClick={handleClick}>
+              <ListItemIcon>
+                <ErrorIcon style={{ color: "white" }} />
+              </ListItemIcon>
+              <ListItemText 
+              disableTypography
+              primary={<Typography type="body2" style={{ color: 'white' }}>Bugs</Typography>}
+               />
+              
+              
+            </ListItemButton>
+                
+      
+                  <Typography
+                    variant="h6"
+                    color="white"
+                    sx={{ m: "15px 0 5px 20px" }}
+                  >
+      
+                    Transportation
+                  </Typography>
+                  
+                  <ListItemButton onClick={handleClick}>
+              <ListItemIcon>
+                <BusinessIcon style={{ color: "white" }} />
+              </ListItemIcon>
+              <ListItemText 
+              disableTypography
+              primary={<Typography type="body2" style={{ color: 'white' }}>Cargo</Typography>}
+               />
+              {open ? <ExpandLess style={{ color: "white" }} /> : <AddIcon style={{ color: "white" }} />}
+              
+            </ListItemButton>
+            <Collapse in={open}  >
+              <List  component="div" disablePadding>
+                <ListItemButton sx={{ pl: 9 }}>
+                 
+                  <ListItemText 
                   disableTypography
                   primary={<Typography type="body2" style={{ color: 'white' }}>subitem</Typography>}
-                 
-                 />
-               </ListItemButton>
-             </List>
-           </Collapse>
-           <ListItemButton>
-             <ListItemIcon>
-               < LayersClearIcon style={{ color: "white" }} />
-             </ListItemIcon>
-             <ListItemText 
-                disableTypography
-                primary={<Typography type="body2" style={{ color: 'white' }}>Tracking</Typography>}
-              />
-           </ListItemButton>
-           <ListItemButton >
-             <ListItemIcon>
-               <HourglassEmptyIcon style={{ color: "white" }}/>
-             </ListItemIcon>
-             <ListItemText 
-             disableTypography
-             primary={<Typography type="body2" style={{ color: 'white' }}>Ananlysis</Typography>}
-              />
-             
-           </ListItemButton>
-           
-         </List>
-     
-                 <Typography
-                   variant="h6"
-                   color="white"
-                   sx={{ m: "15px 0 5px 20px" }}
-                 >
-                   System
-                 </Typography>
-                 <Item
-                   title="Reports"
-                   to="/"
-                   icon={<DetailsIcon style={{ color: "white" }}/>}
-                   selected={selected}
-                   setSelected={setSelected}
-                 />
-                 <Item
-                   title="Deviations"
-                   to="/"
-                   icon={<ContactsOutlinedIcon  style={{ color: "white" }}/>}
-                   selected={selected}
-                   setSelected={setSelected}
-                 />
-                 <Item
-                   title="Bugs"
-                   to="/"
-                   icon={<ErrorIcon style={{ color: "white" }}  />}
-                   selected={selected}
-                   setSelected={setSelected}
-                 />
-     
-                 <Typography
-                   variant="h6"
-                   color="white"
-                   sx={{ m: "15px 0 5px 20px" }}
-                 >
-     
-                   Transportation
-                 </Typography>
-                 
-                 <ListItemButton onClick={handleClick}>
-             <ListItemIcon>
-               <BusinessIcon style={{ color: "white" }} />
-             </ListItemIcon>
-             <ListItemText 
-             disableTypography
-             primary={<Typography type="body2" style={{ color: 'white' }}>Cargo</Typography>}
-              />
-             {open ? <ExpandLess style={{ color: "white" }} /> : <AddIcon style={{ color: "white" }} />}
-             
-           </ListItemButton>
-           <Collapse in={open} timeout="auto" unmountOnExit>
-             <List  component="div" disablePadding>
-               <ListItemButton sx={{ pl: 9 }}>
-                
-                 <ListItemText 
-                 disableTypography
-                 primary={<Typography type="body2" style={{ color: 'white' }}>subitem</Typography>}
-                 />
-                 {open ? <AddIcon style={{ color: "white" }} /> : <ExpandLess  style={{ color: "white" }}/>}
-               </ListItemButton>
-               <ListItemButton sx={{ pl: 9 }}>
-                
-                 <ListItemText 
-                 disableTypography
-                 primary={<Typography type="body2" style={{ color: 'white' }}>subitem</Typography>}
                   />
-                 {open ? <AddIcon style={{ color: "white" }} /> : <ExpandLess style={{ color: "white" }}/>}
-               </ListItemButton>
-               <ListItemButton sx={{ pl: 9 }}>
-                
-                 <ListItemText    
-                 disableTypography
-                 primary={<Typography type="body2" style={{ color: 'white' }}>subitem</Typography>}
-                 />
-                 {open ? <AddIcon style={{ color: "white" }} /> : <ExpandLess  style={{ color: "white" }}/>}
-               </ListItemButton>
-             </List>
-           </Collapse>
-                
-             
-                  <ListItemButton onClick={handleClick}>
-             <ListItemIcon>
-               <BarChartOutlinedIcon style={{ color: "white" }} />
-             </ListItemIcon>
-             <ListItemText 
-             disableTypography
-             primary={<Typography type="body2" style={{ color: 'white' }}>Urban</Typography>}
+                  {open ? <AddIcon style={{ color: "white" }} /> : <ExpandLess  style={{ color: "white" }}/>}
+                </ListItemButton>
+                <ListItemButton sx={{ pl: 9 }}>
+                 
+                  <ListItemText 
+                  disableTypography
+                  primary={<Typography type="body2" style={{ color: 'white' }}>subitem</Typography>}
+                   />
+                  {open ? <AddIcon style={{ color: "white" }} /> : <ExpandLess style={{ color: "white" }}/>}
+                </ListItemButton>
+                <ListItemButton sx={{ pl: 9 }}>
+                 
+                  <ListItemText    
+                  disableTypography
+                  primary={<Typography type="body2" style={{ color: 'white' }}>subitem</Typography>}
+                  />
+                  {open ? <AddIcon style={{ color: "white" }} /> : <ExpandLess  style={{ color: "white" }}/>}
+                </ListItemButton>
+              </List>
+            </Collapse>
+                 
+              
+                   <ListItemButton onClick={handleClick}>
+              <ListItemIcon>
+                <BarChartOutlinedIcon style={{ color: "white" }} />
+              </ListItemIcon>
+              <ListItemText 
+              disableTypography
+              primary={<Typography type="body2" style={{ color: 'white' }}>Urban</Typography>}
+               />
+              {open ? <ExpandLess style={{ color: "white" }} /> : <ExpandMore style={{ color: "white" }}/>}
+              
+            </ListItemButton>
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <List  component="div" disablePadding>
+                <ListItemButton sx={{ pl: 9 }}>
+                 
+                  <ListItemText 
+                  disableTypography
+                  primary={<Typography type="body2" style={{ color: 'white' }}>subitem</Typography>} />
+                </ListItemButton>
+              </List>
+            </Collapse>
+                 
+                     <ListItemButton onClick={handleClick}>
+              <ListItemIcon >
+                <PieChartOutlineOutlinedIcon style={{ color: "white" }} />
+              </ListItemIcon>
+              <ListItemText 
+              disableTypography
+              primary={<Typography type="body2" style={{ color: 'white' }}>Settings</Typography>}
+              
               />
-             {open ? <ExpandLess style={{ color: "white" }} /> : <ExpandMore style={{ color: "white" }}/>}
-             
-           </ListItemButton>
-           <Collapse in={open} timeout="auto" unmountOnExit>
-             <List  component="div" disablePadding>
-               <ListItemButton sx={{ pl: 9 }}>
-                
-                 <ListItemText 
-                 disableTypography
-                 primary={<Typography type="body2" style={{ color: 'white' }}>subitem</Typography>} />
-               </ListItemButton>
-             </List>
-           </Collapse>
-                
+              {open ? <ExpandLess style={{ color: "white" }} /> : <ExpandMore style={{ color: "white" }}/>}
+              
+            </ListItemButton>
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <List  component="div" disablePadding>
+                <ListItemButton sx={{ pl: 9 }}>
+                 
+                  <ListItemText 
+                  disableTypography
+                  primary={<Typography type="body2" style={{ color: 'white' }}>sub item</Typography>}
+                  />
+                </ListItemButton>
+              </List>
+            </Collapse>
+                  
                     <ListItemButton onClick={handleClick}>
-             <ListItemIcon >
-               <PieChartOutlineOutlinedIcon style={{ color: "white" }} />
-             </ListItemIcon>
-             <ListItemText 
-             disableTypography
-             primary={<Typography type="body2" style={{ color: 'white' }}>Settings</Typography>}
-             
-             />
-             {open ? <ExpandLess style={{ color: "white" }} /> : <ExpandMore style={{ color: "white" }}/>}
-             
-           </ListItemButton>
-           <Collapse in={open} timeout="auto" unmountOnExit>
-             <List  component="div" disablePadding>
-               <ListItemButton sx={{ pl: 9 }}>
-                
-                 <ListItemText 
-                 disableTypography
-                 primary={<Typography type="body2" style={{ color: 'white' }}>sub item</Typography>}
-                 />
-               </ListItemButton>
-             </List>
-           </Collapse>
-                 <Item
-                   title="Activity"
-                   to="/"
-                   icon={<OpenInNewIcon style={{ color: "white" }} />}
-                   selected={selected}
-                   setSelected={setSelected}
-                 />
-                 <Item
-                   title="Settings"
-                   to="/"
-                   icon={<SettingsInputSvideoIcon style={{ color: "white" }} />}
-                   selected={selected}
-                   setSelected={setSelected}
-                 />
-                 
-                 <Typography
-                   variant="h6"
-                   color="light-grey"
-                   sx={{ m: "15px 0 5px 20px" }}
-                 >
-                   
-                 </Typography>
-                        <ListItemButton onClick={handleClick}>
-             <ListItemIcon >
-               <PieChartOutlineOutlinedIcon style={{ color: "white" }}/>
-             </ListItemIcon>
-             
-             <ListItemText 
-                    disableTypography
-                    primary={<Typography type="body2" style={{ color: 'white' }}>Lorem ipsum</Typography>}
-             />
-             {open ? <ExpandLess style={{ color: "white" }} /> : <KeyboardDoubleArrowRightIcon style={{ color: "white" }} />}
-             
-           </ListItemButton>
-           <Collapse in={open} timeout="auto" unmountOnExit>
-             <List  component="div" disablePadding>
-               <ListItemButton sx={{ pl: 9 }}>
-                
-                 <ListItemText 
-                 disableTypography
-                 primary={<Typography type="body2" style={{ color: 'white' }}>sub item</Typography>}
-     
+                  <ListItemIcon >
+                    <OpenInNewIcon style={{ color: "white" }}/>
+                  </ListItemIcon>
+                  
+                  <ListItemText 
+                         disableTypography
+                         primary={<Typography type="body2" style={{ color: 'white' }}>Activity</Typography>}
                   />
-               </ListItemButton>
-             </List>
-           </Collapse>
-               </Box>
-             </Menu>
+                 
+                </ListItemButton>
+                
+                  <ListItemButton onClick={handleClick}>
+                  <ListItemIcon >
+                    <SettingsInputSvideoIcon style={{ color: "white" }}/>
+                  </ListItemIcon>
+                  
+                  <ListItemText 
+                         disableTypography
+                         primary={<Typography type="body2" style={{ color: 'white' }}>Settings</Typography>}
+                  />
+                 
+                </ListItemButton>
+  
+                  
+                
+                         <ListItemButton onClick={handleClick}>
+              <ListItemIcon >
+                <PieChartOutlineOutlinedIcon style={{ color: "white" }}/>
+              </ListItemIcon>
+              
+              <ListItemText 
+                     disableTypography
+                     primary={<Typography type="body2" style={{ color: 'white' }}>Lorem ipsum</Typography>}
+              />
+              {open ? <ExpandLess style={{ color: "white" }} /> : <KeyboardDoubleArrowRightIcon style={{ color: "white" }} />}
+              
+            </ListItemButton>
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <List  component="div" disablePadding>
+                <ListItemButton sx={{ pl: 9 }}>
+                 
+                  <ListItemText 
+                  disableTypography
+                  primary={<Typography type="body2" style={{ color: 'white' }}>sub item</Typography>}
+      
+                   />
+                </ListItemButton>
+              </List>
+            </Collapse>
+                </Box>
+              </Menu>
             
           ) : (
             
@@ -363,40 +372,27 @@ const Sidebar = () => {
             
             >
               {/* LOGO AND MENU ICON */}
-              <MenuItem
-                onClick={() => setIsCollapsed(!isCollapsed)}
-               
-               
-                style={{
-                  margin: "10px 0 20px 0",
-                  
-                  
-                }}
-              >
               
-                  <Box
-                    display="flex"
-                    justifyContent="space-between"
-                    alignItems="center"
-                    ml="10px"
-                  >
-                   <Item
-                   title="Arrival"
-                   to="/"
-                   icon={<FlareIcon  style={{ color: "white" }} />}
-                  
-                 />
+                 
+                
                      
-                    
-              
-                  </Box>
-              
-              </MenuItem>
+            
     
               
               <Box paddingLeft={isCollapsed ? undefined : "10%"}>
                
                    <List>
+                      
+                  <ListItemButton >
+            <ListItemIcon>
+              <FlareIcon style={{ color: "white" }}/>
+            </ListItemIcon>
+            <ListItemText 
+            disableTypography
+            primary={<Typography type="body2" style={{ color: 'white' }}>Arrival</Typography>}
+             />
+            
+          </ListItemButton>
           <ListItemButton onClick={handleClick}>
             <ListItemIcon  
              >
@@ -410,7 +406,7 @@ const Sidebar = () => {
             {open ? <ExpandLess style={{ color: 'white' }}  /> : <AddIcon style={{ color: "white" }}/>}
             
           </ListItemButton>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={open}  >
             <List  component="div" disablePadding>
               <ListItemButton sx={{ pl: 9 }}>
                
@@ -451,27 +447,46 @@ const Sidebar = () => {
                 >
                   System
                 </Typography>
-                <Item
-                  title="Reports"
-                  to="/"
-                  icon={<DetailsIcon style={{ color: "white" }}/>}
-                  selected={selected}
-                  setSelected={setSelected}
-                />
-                <Item
-                  title="Deviations"
-                  to="/"
-                  icon={<ContactsOutlinedIcon  style={{ color: "white" }}/>}
-                  selected={selected}
-                  setSelected={setSelected}
-                />
-                <Item
-                  title="Bugs"
-                  to="/"
-                  icon={<ErrorIcon style={{ color: "white" }}  />}
-                  selected={selected}
-                  setSelected={setSelected}
-                />
+               
+              
+              <ListItemButton onClick={handleClick}>
+            <ListItemIcon>
+              <DetailsIcon style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText 
+            disableTypography
+            primary={<Typography type="body2" style={{ color: 'white' }}>Reports</Typography>}
+             />
+            
+            
+          </ListItemButton>
+               
+                <ListItemButton onClick={handleClick}>
+            <ListItemIcon>
+              <ContactsOutlinedIcon style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText 
+            disableTypography
+            primary={<Typography type="body2" style={{ color: 'white' }}>Deviations</Typography>}
+             />
+            
+            
+          </ListItemButton>
+              
+               
+                
+                <ListItemButton onClick={handleClick}>
+            <ListItemIcon>
+              <ErrorIcon style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText 
+            disableTypography
+            primary={<Typography type="body2" style={{ color: 'white' }}>Bugs</Typography>}
+             />
+            
+            
+          </ListItemButton>
+              
     
                 <Typography
                   variant="h6"
@@ -493,7 +508,7 @@ const Sidebar = () => {
             {open ? <ExpandLess style={{ color: "white" }} /> : <AddIcon style={{ color: "white" }} />}
             
           </ListItemButton>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={open}  >
             <List  component="div" disablePadding>
               <ListItemButton sx={{ pl: 9 }}>
                
@@ -568,28 +583,33 @@ const Sidebar = () => {
               </ListItemButton>
             </List>
           </Collapse>
-                <Item
-                  title="Activity"
-                  to="/"
-                  icon={<OpenInNewIcon style={{ color: "white" }} />}
-                  selected={selected}
-                  setSelected={setSelected}
-                />
-                <Item
-                  title="Settings"
-                  to="/"
-                  icon={<SettingsInputSvideoIcon style={{ color: "white" }} />}
-                  selected={selected}
-                  setSelected={setSelected}
-                />
                 
-                <Typography
-                  variant="h6"
-                  color="white"
-                  sx={{ m: "15px 0 5px 20px" }}
-                >
-                  
-                </Typography>
+                  <ListItemButton onClick={handleClick}>
+                <ListItemIcon >
+                  <OpenInNewIcon style={{ color: "white" }}/>
+                </ListItemIcon>
+                
+                <ListItemText 
+                       disableTypography
+                       primary={<Typography type="body2" style={{ color: 'white' }}>Activity</Typography>}
+                />
+               
+              </ListItemButton>
+              
+                <ListItemButton onClick={handleClick}>
+                <ListItemIcon >
+                  <SettingsInputSvideoIcon style={{ color: "white" }}/>
+                </ListItemIcon>
+                
+                <ListItemText 
+                       disableTypography
+                       primary={<Typography type="body2" style={{ color: 'white' }}>Settings</Typography>}
+                />
+               
+              </ListItemButton>
+
+                
+              
                        <ListItemButton onClick={handleClick}>
             <ListItemIcon >
               <PieChartOutlineOutlinedIcon style={{ color: "white" }}/>
